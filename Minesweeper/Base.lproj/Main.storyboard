@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Minesweeper" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AsV-fb-Rqv">
+                                <rect key="frame" x="157" y="73" width="46" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="B7S-D7-GKO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Easy"/>
+                                <connections>
+                                    <action selector="easyGameButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uun-LZ-yPG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qMl-kd-ebV">
+                                <rect key="frame" x="231" y="35" width="136" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="136" id="f9v-Cd-kjn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="New Game"/>
+                                <connections>
+                                    <action selector="newGameButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4PH-39-I3D"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Over!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dhk-2T-p8P">
+                                <rect key="frame" x="235" y="523" width="128" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="128" id="ZSq-G0-XOo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="1" green="0.086118007799999993" blue="0.048364002619999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tnC-bP-48A">
+                                <rect key="frame" x="263" y="73" width="73" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Medium"/>
+                                <connections>
+                                    <action selector="mediumGameButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e09-Qe-tfd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1CB-b7-Wzr">
+                                <rect key="frame" x="396" y="73" width="46" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="e9S-5n-ue1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Hard"/>
+                                <connections>
+                                    <action selector="hardGameButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KJp-J4-Go7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tnC-bP-48A" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3Zh-7o-lNm"/>
+                            <constraint firstItem="qMl-kd-ebV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="15" id="7FK-R3-7xO"/>
+                            <constraint firstItem="tnC-bP-48A" firstAttribute="top" secondItem="qMl-kd-ebV" secondAttribute="bottom" constant="8" symbolic="YES" id="I8Z-C2-wCh"/>
+                            <constraint firstItem="1CB-b7-Wzr" firstAttribute="top" secondItem="tnC-bP-48A" secondAttribute="top" id="IFK-WX-ghT"/>
+                            <constraint firstItem="1CB-b7-Wzr" firstAttribute="leading" secondItem="tnC-bP-48A" secondAttribute="trailing" constant="60" id="Lp9-tT-gBt"/>
+                            <constraint firstItem="dhk-2T-p8P" firstAttribute="centerX" secondItem="tnC-bP-48A" secondAttribute="centerX" id="Rae-8s-5DN"/>
+                            <constraint firstItem="1CB-b7-Wzr" firstAttribute="top" secondItem="AsV-fb-Rqv" secondAttribute="top" id="cEK-3D-ZSK"/>
+                            <constraint firstItem="tnC-bP-48A" firstAttribute="leading" secondItem="AsV-fb-Rqv" secondAttribute="trailing" constant="60" id="cnp-3M-47G"/>
+                            <constraint firstItem="AsV-fb-Rqv" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="53" id="eWy-jx-sBw"/>
+                            <constraint firstItem="qMl-kd-ebV" firstAttribute="centerX" secondItem="tnC-bP-48A" secondAttribute="centerX" id="i3L-1h-rjy"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dhk-2T-p8P" secondAttribute="bottom" constant="48" id="yNr-tz-UOJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="easyButton" destination="AsV-fb-Rqv" id="7eg-Ra-jYR"/>
+                        <outlet property="endGameLabel" destination="dhk-2T-p8P" id="2yi-xh-ddU"/>
+                        <outlet property="hardButton" destination="1CB-b7-Wzr" id="1jo-mC-RLP"/>
+                        <outlet property="mediumButton" destination="tnC-bP-48A" id="m6o-kR-e6B"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="190" y="235"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="bNw-nM-iJt">
+            <objects>
+                <viewController id="fF4-5k-amM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OzE-Qm-1f1"/>
+                        <viewControllerLayoutGuide type="bottom" id="pcC-Ux-Jhu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="s6U-2y-Z0e">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Game Over!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wlK-pk-AEK">
+                                <rect key="frame" x="175" y="78" width="250" height="69"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="42"/>
+                                <color key="textColor" red="1" green="0.086118007799999993" blue="0.048364002619999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Htu-wY-0TZ">
+                                <rect key="frame" x="241" y="204" width="117" height="46"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="New Game"/>
+                                <connections>
+                                    <action selector="newGame:" destination="fF4-5k-amM" eventType="touchUpInside" id="L2t-th-IAr"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="hZd-i2-lqQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Htu-wY-0TZ" firstAttribute="centerX" secondItem="s6U-2y-Z0e" secondAttribute="centerX" id="0Bl-XF-nVp"/>
+                            <constraint firstItem="wlK-pk-AEK" firstAttribute="centerX" secondItem="s6U-2y-Z0e" secondAttribute="centerX" id="4wf-wh-kWE"/>
+                            <constraint firstItem="wlK-pk-AEK" firstAttribute="top" secondItem="OzE-Qm-1f1" secondAttribute="bottom" constant="58" id="CJu-MA-2tq"/>
+                            <constraint firstItem="Htu-wY-0TZ" firstAttribute="top" secondItem="wlK-pk-AEK" secondAttribute="bottom" constant="57" id="PZc-d1-gCc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="endGameLabel" destination="wlK-pk-AEK" id="7k3-UR-qbI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0jg-f8-gGI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="993" y="121"/>
+        </scene>
+    </scenes>
+</document>
